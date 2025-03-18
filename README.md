@@ -16,3 +16,9 @@ well... what I can say except you can press the ENTER button and hope to roll a 
 ## IDEs and builders used to make this small program
 * PyCharm Community Edition 2024.3.3
 * pyinstaller
+
+# release information
+## download contents
+the ZIP file contains program files and the source file (.py) itself
+## installation
+open the ZIP file, grab all the files and take them to some directory on your PC.
