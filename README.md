@@ -1,6 +1,6 @@
 # Mahvay's RNG Challenge
 ### welcome!
-made by Mahvay (or "Mva" if you like the shorter word), welcome to this pack's GitHub page.
+made by Mahvay (or "Mva" if you like the shorter word), welcome to this program's GitHub page.
 
 the RNG Challenge is a simple game in which you press ENTER button and it outputs a random value.
 lower output values might appear frequently while higher values might appear rarely.
