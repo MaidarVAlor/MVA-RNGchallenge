@@ -2,7 +2,7 @@
 #
 # you might see that I played too much Black Desert Mobile by seeing the rarity names...
 #
-# UPDATE 1.1: added rarity chart! now you can estimate how much time you will waste trying to drop a very high roll value!
+# UPDATE 1.2: added HELP command and STATS command to see your ongoing session statistics. also removed the repetitive message which was wasting space imo
 
 import random
 import time
@@ -10,7 +10,7 @@ import datetime
 
 todays_time = datetime.datetime.now().isoformat(sep=" ", timespec="seconds") # thank you StackOverflow
 
-print("welcome to Mahvay's 'RNG Challenge (v1.1)'!")
+print("welcome to Mahvay's 'RNG Challenge (v1.2)'!")
 print("datetime:", todays_time)
 print(" ")
 
@@ -31,13 +31,36 @@ def RNGchall():
     else:
       y += 1  # add dopamine if 1 is rolled
   return y
+  
+print("1. press ENTER to praise RNGesus")
+print("2. type 'RATES'/'rates' for rarity charts")
+print("3. type 'EXIT'/'exit' to quit")
+print("4. type 'STATS'/'stats' to show ongoing session stats")
+print("5. type 'HELP'/'help' to show user manual")
 
 while input_value != "EXIT" or input_value != "exit":
-    print("press ENTER to praise RNGesus, type 'RATES'/'rates' for rarity charts or type 'EXIT'/'exit' to quit")
     input_value = input("")
 
     if input_value == "EXIT" or input_value == "exit":
         break
+    elif input_value == 'HELP' or input_value == 'help':
+        print("user manual:")
+        print("1. press ENTER to praise RNGesus")
+        print("2. type 'RATES'/'rates' for rarity charts")
+        print("3. type 'EXIT'/'exit' to quit")
+        print("4. type 'STATS'/'stats' to show ongoing session stats")
+        print("5. type 'HELP'/'help' to show user manual")
+        print(" ")
+    elif input_value == 'STATS' or input_value == 'stats':
+        print("=== ONGOING SESSION STATS ===")
+        print(" ")
+        print("attempts:", attempts)
+        print(" ")
+        print("earned drops:")
+        print("> decent:", decent_rolls)
+        print("> RNG:", rng_rolls)
+        print("> eternal:", eternal_rolls)
+        print(" ")
     elif input_value == "RATES" or input_value == "rates":
         print("here is your rarity chart")
         print(" ")
@@ -221,7 +244,7 @@ def random_fun_fact():
         z4 = str("'Extreme RNGesus Drop' and 'ULTRA EXTREME RNGesus DROP' are references to the game 'Peggle', where hitting all the pegs would show an 'ULTRA EXTREME FEVER' message.")
         return z4
     else:
-        z5 = str("this spaghetti script took an hour to make and another hour to format the small ASCII arts.")
+        z5 = str("this spaghetti script took now 1.5 hours. that's it.")
         return z5
 
 print("=== SESSION SUMMARY ===")
