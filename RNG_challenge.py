@@ -1,6 +1,8 @@
 # work by Mahvay, WTFPL licensed
 #
 # you might see that I played too much Black Desert Mobile by seeing the rarity names...
+#
+# UPDATE 1.1: added rarity chart! now you can estimate how much time you will waste trying to drop a very high roll value!
 
 import random
 import time
@@ -8,7 +10,7 @@ import datetime
 
 todays_time = datetime.datetime.now().isoformat(sep=" ", timespec="seconds") # thank you StackOverflow
 
-print("welcome to Mahvay's 'RNG Challenge'!")
+print("welcome to Mahvay's 'RNG Challenge (v1.1)'!")
 print("datetime:", todays_time)
 print(" ")
 
@@ -31,11 +33,35 @@ def RNGchall():
   return y
 
 while input_value != "EXIT" or input_value != "exit":
-    print("press ENTER to praise RNGesus or type 'EXIT'/'exit' to quit")
+    print("press ENTER to praise RNGesus, type 'RATES'/'rates' for rarity charts or type 'EXIT'/'exit' to quit")
     input_value = input("")
 
     if input_value == "EXIT" or input_value == "exit":
         break
+    elif input_value == "RATES" or input_value == "rates":
+        print("here is your rarity chart")
+        print(" ")
+        print("reading guide:")
+        print("<RARITY>: <BASE CHANCE>, <100 ATTEMPTS>, <1000 ATTEMPTS>, <10k ATTEMPTS>, <100k ATTEMPTS>")
+        print(" ")
+        print("Ancient/Old: both 50%")
+        print("Normal: 25%, 99.99%")
+        print("Uncommon: 12.5%, 99.99%")
+        print("Magic: 6.25%, 99.84%")
+        print("Rare: 3.125%, 95.82%")
+        print("Unique: 1.5625%, 79.30%, 99.99%")
+        print("Epic: 1/128, 54.36%, 99.96%")
+        print("Special: 1/256, 32.39%, 98%")
+        print("Legendary: 1/512, 17.76%, 85.84%")
+        print("Mystical: 1/1024, 9.31%, 62.36%, 99.99%")
+        print("Super Special: 1/2048, 4.77%, 38.64%, 99.24%")
+        print("Abyssal: 1/4096, 2.41%, 21.66%, 91.30%")
+        print("Primal: 1/8192, 1.21%, 11.49%, 70.50%, 99.99%")
+        print("Ultimate: 16.3k, 0.61%, 5.92%, 45.69%, 99.78%")
+        print("Chaos: 32.7k, 0.3%, 3.01%, 26.30%, 95.27%")
+        print("DeathWish: 65.5k, 0.15%, 1.51%, 14.15%, 78.26%")
+        print("Eternal: 131k, 0.08%, 0.76%, 7.35%, 53.37%")
+        print(" ")
     else:
         reward_result = RNGchall()
 
@@ -187,7 +213,7 @@ def random_fun_fact():
         return z1
     elif z == 1:
         z2 = str("there are 18 various rarities to hit. some of their names were takes straight from Black Desert Mobile and the GD level 'lets go gambling'.")
-        return z2
+        return z2 # UPDATE THAT IF NEW RARITIES ARE GOING TO BE ADDED IN THE FUTURE!!!
     elif z == 2:
         z3 = str("the whole concept of this RNG game was inspired by the GD level 'lets go gambling' and the originator, 'Sols RNG'.")
         return z3
